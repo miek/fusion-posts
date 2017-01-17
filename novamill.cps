@@ -328,7 +328,8 @@ function onOpen() {
   }
 
   // absolute coordinates and feed per min
-  writeBlock(gAbsIncModal.format(90), gFeedModeModal.format(properties.useG95 ? 95 : 94), gPlaneModal.format(17), gFormat.format(49), gFormat.format(40), gFormat.format(80));
+  writeBlock(gAbsIncModal.format(90), gFeedModeModal.format(properties.useG95 ? 95 : 94), gPlaneModal.format(17));
+  writeBlock(gFormat.format(49), gFormat.format(40), gFormat.format(80));
 
   switch (unit) {
   case IN:
