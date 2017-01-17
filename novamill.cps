@@ -2,7 +2,7 @@
   Copyright (C) 2012-2017 by Autodesk, Inc.
   All rights reserved.
 
-  FANUC post processor configuration.
+  Denford Novamill post processor configuration.
 
   $Revision: 41275 65a55801602ffd7914cb2ea10935cd9f39fce6c6 $
   $Date: 2017-01-14 20:39:34 $
@@ -10,16 +10,16 @@
   FORKID {04622D27-72F0-45d4-85FB-DB346FD1AE22}
 */
 
-description = "Generic FANUC";
-vendor = "Fanuc";
-vendorUrl = "http://www.fanuc.com";
+description = "Denford Novamill";
+vendor = "Denford";
+vendorUrl = "http://http://website.denford.ltd.uk/";
 legal = "Copyright (C) 2012-2017 by Autodesk, Inc.";
 certificationLevel = 2;
 minimumRevision = 24000;
 
-longDescription = "Generic post for Fanuc.";
+longDescription = "Generic post for Denford Novamill.";
 
-extension = "nc";
+extension = "fnc";
 programNameIsInteger = true;
 setCodePage("ascii");
 
