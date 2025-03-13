@@ -1848,20 +1848,21 @@ function onClose() {
     writeBlock(gFormat.format(54.4), "P0");
   }
 
-  if (!machineConfiguration.hasHomePositionX() && !machineConfiguration.hasHomePositionY()) {
-    // 90/91 mode is don't care
-    writeBlock(gFormat.format(28), gAbsIncModal.format(91), "X" + xyzFormat.format(0), "Y" + xyzFormat.format(0)); // return to home
-  } else {
-    var homeX;
-    if (machineConfiguration.hasHomePositionX()) {
-      homeX = "X" + xyzFormat.format(machineConfiguration.getHomePositionX());
-    }
-    var homeY;
-    if (machineConfiguration.hasHomePositionY()) {
-      homeY = "Y" + xyzFormat.format(machineConfiguration.getHomePositionY());
-    }
-    writeBlock(gAbsIncModal.format(90), gFormat.format(53), gMotionModal.format(0), homeX, homeY);
-  }
+  writeBlock(gFormat.format(28), gAbsIncModal.format(91), "X" + xyzFormat.format(0), "Y" + xyzFormat.format(0)); // return to home
+  //if (!machineConfiguration.hasHomePositionX() && !machineConfiguration.hasHomePositionY()) {
+  //  // 90/91 mode is don't care
+  //  writeBlock(gFormat.format(28), gAbsIncModal.format(91), "X" + xyzFormat.format(0), "Y" + xyzFormat.format(0)); // return to home
+  //} else {
+  //  var homeX;
+  //  if (machineConfiguration.hasHomePositionX()) {
+  //    homeX = "X" + xyzFormat.format(machineConfiguration.getHomePositionX());
+  //  }
+  //  var homeY;
+  //  if (machineConfiguration.hasHomePositionY()) {
+  //    homeY = "Y" + xyzFormat.format(machineConfiguration.getHomePositionY());
+  //  }
+  //  writeBlock(gAbsIncModal.format(90), gFormat.format(53), gMotionModal.format(0), homeX, homeY);
+  //}
 
   onImpliedCommand(COMMAND_END);
   onImpliedCommand(COMMAND_STOP_SPINDLE);
